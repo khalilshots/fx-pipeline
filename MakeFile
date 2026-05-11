@@ -1,0 +1,16 @@
+.PHONY: test run docker-up docker-down perf
+
+test:
+	mvn test
+
+run:
+	mvn spring-boot:run
+
+docker-up:
+	docker-compose up --build
+
+docker-down:
+	docker-compose down
+
+perf:
+	k6 run perf/k6-deals-import.js
