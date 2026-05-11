@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/fxdeals}
+    username: ${SPRING_DATASOURCE_USERNAME:fxuser}
+    password: ${SPRING_DATASOURCE_PASSWORD:fxpass}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+server:
+  port: 8080
